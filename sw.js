@@ -29,7 +29,7 @@ self.__precacheManifest = [
   },
   {
     "url": "build/stencil-vue-example.js",
-    "revision": "64bedf613b779bdb3ada539b7176e76b"
+    "revision": "f1b172bb62ac21291a745d31886a62ca"
   },
   {
     "url": "build/stencil-vue-example/8oy70diq.es5.js",
@@ -40,16 +40,16 @@ self.__precacheManifest = [
     "revision": "9a688400116f87b80fb8af3e3c63132c"
   },
   {
+    "url": "build/stencil-vue-example/stencil-vue-example.3hi4vh2i.js",
+    "revision": "dd2199cef648ec6bd68226d539300ff8"
+  },
+  {
     "url": "build/stencil-vue-example/stencil-vue-example.e7t5dghs.js",
     "revision": "7ee9643750d80ee95be400b1b175802b"
   },
   {
-    "url": "build/stencil-vue-example/stencil-vue-example.ussggqjr.js",
-    "revision": "2c6fb8fc7478d22e7fdfe8c4ca6add0e"
-  },
-  {
     "url": "index.html",
-    "revision": "5e0696784523b50ec9a99bf8e2ba6158"
+    "revision": "cc389b5b34ad283ee64de5c8c115a10b"
   },
   {
     "url": "manifest.json",

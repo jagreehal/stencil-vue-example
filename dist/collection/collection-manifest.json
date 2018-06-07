@@ -1,0 +1,38 @@
+{
+  "components": [
+    {
+      "tag": "profile-card",
+      "dependencies": [],
+      "componentClass": "ProfileCard",
+      "componentPath": "components/profile-card/profile-card.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "image",
+          "type": "String",
+          "attr": "image"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      },
+      "events": [
+        {
+          "event": "messageSent"
+        }
+      ]
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.9.7",
+    "typescriptVersion": "2.9.1"
+  },
+  "bundles": []
+}

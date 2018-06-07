@@ -1,0 +1,79 @@
+{
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.9.7"
+  },
+  "app": {
+    "namespace": "StencilVueExample",
+    "fsNamespace": "stencil-vue-example",
+    "components": 1,
+    "entries": 1,
+    "bundles": 3
+  },
+  "options": {
+    "minifyJs": true,
+    "minifyCss": true,
+    "hashFileNames": true,
+    "hashedFileNameLength": 8,
+    "buildEs5": true
+  },
+  "components": [
+    {
+      "tag": "profile-card",
+      "dependencies": [],
+      "dependencyOf": []
+    }
+  ],
+  "entries": [
+    {
+      "entryId": "entry:profile-card",
+      "components": [
+        {
+          "tag": "profile-card",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "8oy70diq.js",
+          "outputs": [
+            "dist/stencil-vue-example/8oy70diq.js",
+            "www/build/stencil-vue-example/8oy70diq.js"
+          ],
+          "size": 1025,
+          "gzip": 591
+        },
+        {
+          "fileName": "8oy70diq.es5.js",
+          "outputs": [
+            "dist/stencil-vue-example/8oy70diq.es5.js",
+            "www/build/stencil-vue-example/8oy70diq.es5.js"
+          ],
+          "size": 1357,
+          "gzip": 685,
+          "target": "es5"
+        },
+        {
+          "fileName": "8oy70diq.js",
+          "outputs": [
+            "dist/esm/es5/8oy70diq.js"
+          ],
+          "size": 1272,
+          "gzip": 647,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/profile-card/profile-card.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    }
+  ],
+  "sourceGraph": {
+    "src/components/profile-card/profile-card.tsx": []
+  },
+  "collections": []
+}

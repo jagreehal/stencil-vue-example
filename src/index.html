@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Stencil Vue Example</title>
+  <meta name="Description" content="Stencil App Example">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="theme-color" content="#16161d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+
+  <script src="build/stencil-app.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+  <link rel="apple-touch-icon" href="/assets/icon/icon.png">
+  <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+
+</head>
+
+<body>
+  <div id="app">
+
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+    Vue.config.ignoredElements = [
+      'profile-card'
+    ];
+    var ComponentWithoutChildren = Vue.extend({
+      template: `
+    <div>
+      <form class="measure center">
+        <div class="mt3">
+          <label class="db fw6 lh-copy f6" for="image">Image Url</label>
+          <input 
+            class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2" 
+            type="email" 
+            name="email-address"
+            id="email-address"
+            v-model="imageUrl"/>
+        </div>
+        <div class="mt3">
+          <label class="db fw6 lh-copy f6" for="name">Name</label>
+          <input 
+            class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2" 
+            type="email" 
+            name="email-address"
+            id="email-address"
+            v-model="name"/>
+        </div>
+        <div class="mt3">
+          <label class="db fw6 lh-copy f6" for="text">Text</label>
+          <textarea 
+          id="text" 
+          name="text" 
+          v-model="text"
+          class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2"></textarea>
+        </div>
+      </form>
+      <profile-card v-bind:image="imageUrl" v-bind:name="name" ref="profileCard">
+        {{text}}
+      </profile-card>      
+      <hr/>
+      <article class="pa3 pa5-ns">
+        <h1 class="f4 bold center mw6">Messages</h1>
+        <ul class="list pl0 ml0 center mw6 ba b--light-silver br2">
+          <li class="ph3 pv3 bb b--light-silver" v-for="message in messages">
+              {{ message.name }} says {{message.text}}
+          </li>          
+        </ul>
+      </article>
+    </div>
+  `
+    });
+    let root = new ComponentWithoutChildren({
+      el: '#app',
+      data: {
+        imageUrl: 'https://placekitten.com/g/200/300',
+        name: 'Kitty',
+        text: 'Meow',
+        messages: []
+      },
+      methods: {
+        handleMessageSent: function ({
+          detail
+        }) {
+          this.messages.push(detail);
+        },
+      },
+      mounted: function () {
+        this.$refs.profileCard
+          .addEventListener('messageSent', this.handleMessageSent);
+      }
+    });
+  </script>
+</body>
+
+</html>

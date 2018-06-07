@@ -1,0 +1,1 @@
+// StencilVueExample: CommonJS Main

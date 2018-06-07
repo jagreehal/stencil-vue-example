@@ -1,0 +1,13 @@
+{
+  "namespace": "StencilVueExample",
+  "fsNamespace": "stencil-vue-example",
+  "loader": "../stencil-vue-example.js",
+  "global": "stencil-vue-example.global.js",
+  "corePolyfilled": "stencil-vue-example.e7t5dghs.js",
+  "core": "stencil-vue-example.ussggqjr.js",
+  "components": {
+    "profile-card": {
+      "$": "8oy70diq"
+    }
+  }
+}

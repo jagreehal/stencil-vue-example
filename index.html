@@ -37,30 +37,27 @@
           <label class="db fw6 lh-copy f6" for="image">Image Url</label>
           <input 
             class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2" 
-            type="email" 
-            name="email-address"
-            id="email-address"
+            type="url" 
+            name="imageUrl"
             v-model="imageUrl"/>
         </div>
         <div class="mt3">
           <label class="db fw6 lh-copy f6" for="name">Name</label>
           <input 
             class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2" 
-            type="email" 
-            name="email-address"
-            id="email-address"
+            type="text" 
+            name="name"
             v-model="name"/>
         </div>
         <div class="mt3">
           <label class="db fw6 lh-copy f6" for="text">Text</label>
           <textarea 
-          id="text" 
           name="text" 
           v-model="text"
           class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2"></textarea>
         </div>
       </form>
-      <profile-card v-bind:image="imageUrl" v-bind:name="name" ref="profileCard">
+      <profile-card v-bind:image="imageUrl" v-bind:name="name" ref="profileCard" v-on:messageSent="handleMessageSent">
         {{text}}
       </profile-card>      
       <hr/>
@@ -89,10 +86,6 @@
         }) {
           this.messages.push(detail);
         },
-      },
-      mounted: function () {
-        this.$refs.profileCard
-          .addEventListener('messageSent', this.handleMessageSent);
       }
     });
   </script>

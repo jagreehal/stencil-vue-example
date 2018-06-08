@@ -6,7 +6,7 @@
         "headers": [
           {
             "name": "Link",
-            "value": "</build/stencil-vue-example/stencil-vue-example.e7t5dghs.js>;rel=preload;as=script"
+            "value": "</dist/stencil-vue-example/stencil-vue-example.e7t5dghs.js>;rel=preload;as=script"
           }
         ]
       },
